@@ -1,0 +1,60 @@
+menu {
+    padding: 0px;
+
+    width: 100%;
+    height: 50px;
+    
+    display: flex;
+
+    
+    position: fixed;
+    justify-content: center;
+   
+}
+div#bmenu{
+    background-color: rgb(62, 61, 61);
+
+    width: 1000px;
+    height: 50px;
+
+    align-items: center;
+}
+menu a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 23px;
+
+    border-style: ridge;
+    border-width: 1px;
+    border-color: white;
+
+    align-items: center;
+    text-align: center;
+
+    padding-top: 25px;
+    
+    height: 50px;    
+}
+
+div#login{
+    width: 500px;
+
+    justify-content: end;
+}
+
+menu div{
+    width: 500px;
+
+    display: flex;
+}
+
+menu a:hover{
+    color:black;
+    transition: 0.3s;
+
+    font-size: 19px;
+
+    background-color: white;
+    transition: 1s;
+}
