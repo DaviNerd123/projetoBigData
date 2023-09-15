@@ -14,7 +14,7 @@ menu {
 div#bmenu{
     background-color: rgb(62, 61, 61);
 
-    width: 1000px;
+    width: 70%;
     height: 50px;
 
     align-items: center;
@@ -38,13 +38,14 @@ menu a{
 }
 
 div#login{
-    width: 500px;
-
+    width: 50%;
+    
     justify-content: end;
+    
 }
 
 menu div{
-    width: 500px;
+    width: 50%;
 
     display: flex;
 }
