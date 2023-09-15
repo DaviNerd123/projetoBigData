@@ -1,4 +1,6 @@
-body{
+se
+
+{
     margin: 0px;
     padding: 0px;
 }
@@ -83,4 +85,13 @@ header div{
     background-color: rgba(128, 128, 128, 0.66);
     height: 150px;
     padding-top: 50px;
+}
+h2{
+  text-align: center;
+}
+h5{
+  text-align: center;
+}
+p{
+  text-align: center;
 }
