@@ -38,9 +38,10 @@ menu a{
     align-items: center;
     text-align: center;
 
-    padding-top: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
-    height: 50px;    
+    height: 30px;    
 }
 
 div#login{
@@ -64,4 +65,22 @@ menu a:hover{
 
     background-color: white;
     transition: 1s;
+}
+
+header{
+    position: static;
+
+ 
+
+    height: 200px;
+    
+    background-size: cover;
+    background-image: url(imgs/img1.webp);
+
+    
+}
+header div{
+    background-color: rgba(128, 128, 128, 0.66);
+    height: 150px;
+    padding-top: 50px;
 }
