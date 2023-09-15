@@ -47,9 +47,32 @@ menu a{
 div#login{
     width: 50%;
     
-    justify-content: end;
-    
+    justify-content: end;    
 }
+#login div{
+    justify-content: end;
+    background-image: url(imgs/icon-account-g.png);
+    background-size: cover;
+    
+    width: 50px;
+    height: 50px;
+}
+#login a{
+    width: 50px;
+    border-width: 0px;
+}
+#login div:hover{
+
+    background-color: white;
+    transition: 1s;
+
+    border-radius: 100%;
+   
+}
+#login div:hover{
+
+}
+
 
 menu div{
     width: 50%;
@@ -57,7 +80,7 @@ menu div{
     display: flex;
 }
 
-menu a:hover{
+menu#bmenu a:hover{
     color:black;
     transition: 0.3s;
 
@@ -80,7 +103,10 @@ header{
     
 }
 header div{
-    background-color: rgba(128, 128, 128, 0.66);
+    background-color: rgba(128, 128, 128, 0.767);
+    color: white;
+
     height: 150px;
+
     padding-top: 50px;
 }
