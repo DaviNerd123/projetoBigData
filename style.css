@@ -1,9 +1,14 @@
 
 
 
-{
+body{
     margin: 0px;
     padding: 0px;
+
+    height: 100vh;
+
+   
+    
 }
 
 menu {
@@ -113,19 +118,50 @@ header div{
 
     padding-top: 50px;
 }
-h1{
-  color: white;
+#corpo{
+    margin-top: 10px;
+
+    box-shadow: 8px black;
+    
+}
+#corpo, #corpo section{
+    display: flex;
+
+    align-self: top;
+    justify-content: center;
+
+    width: 100%;
+
+    
+
+
+}
+#corpo section{
+    width: 400px;
+
+    border: 1px;
+    border-style: ridge;
+    border-color: black;
+    border-radius: 10%;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px black;
+
+
+}
+
+.central{
+    margin: 0px 20px 0px 20px;
+}
+
+section{
   text-align: center;
 }
-h2{
-  text-align: center;
-}
-h5{
-  text-align: center;
-}
-h6{
-  text-align: right;
-}
-p{
-  text-align: center;
+
+
+footer{
+    text-align: right;
+
+    font-size: xx-small;
 }
