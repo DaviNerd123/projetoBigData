@@ -122,34 +122,7 @@ header div{
     box-shadow: 8px black;
     
 }
-#corpo, #corpo section{
 
-    justify-content: center;
-
-    width: 100%;
-
-    
-
-
-}
-#corpo section{
-    width: 400px;
-
-    border: 1px;
-    border-style: ridge;
-    border-color: black;
-    border-radius: 10%;
-    flex-direction: column;
-
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px black;
-
-
-}
-
-.central{
-    margin: 0px 20px 0px 20px;
-}
 
 section{
   text-align: center;
