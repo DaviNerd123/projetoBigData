@@ -135,11 +135,17 @@ footer{
     font-size: xx-small;
 }
 h2{
-    text-align:center;
+  text-align: left;
+  padding-left:10px;
+  padding-right: 10px;
 }
 h5{
-   text-align:center;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 p{
-   text-align:center;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
