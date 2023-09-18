@@ -24,3 +24,12 @@ p{
   padding-left: 20px;
   padding-right: 20px;
 }
+.buttonicio{
+  position: relative;
+  left: 850px;
+  border-radius: 8px;
+  background-color: lightblue;
+  border: solid;
+  padding: 10px 10px 10px 10px;
+  margin: 5px;
+}
