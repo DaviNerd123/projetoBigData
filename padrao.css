@@ -1,0 +1,114 @@
+body{
+    justify-content: center;
+    height: 100vh;
+}
+
+menu {
+    padding: 0px;
+    margin: 0px;
+
+    width: 100%;
+    height: 50px;
+    
+    display: flex;
+    
+    position: fixed;
+    justify-content: center;
+   
+}
+div#bmenu{
+    background-color: rgb(62, 61, 61);
+
+    width: 70%;
+    height: 50px;
+
+    align-items: center;
+}
+menu a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 23px;
+
+    border-style: ridge;
+    border-width: 1px;
+    border-color: white;
+
+    align-items: center;
+    text-align: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    height: 30px;    
+}
+
+div#login{
+    width: 50%;
+    
+    justify-content: end;    
+}
+#login div{
+    justify-content: end;
+
+    background-image: url(imgs/icon-account-g.png);
+    background-size: cover;
+    
+    width: 50px;
+    height: 50px;
+}
+#login a{
+    width: 50px;
+    border-width: 0px;
+}
+#login div:hover{
+
+    background-color: white;
+    transition: 1s;
+
+    border-radius: 100%;
+   
+}
+#login div:hover{
+    border-radius: 100%;
+    background-color: white;
+    transition: 1s;
+}
+
+
+menu div{
+    width: 50%;
+
+    display: flex;
+}
+
+menu#bmenu a:hover{
+    color:black;
+    transition: 0.3s;
+
+    font-size: 19px;
+
+    background-color: white;
+    transition: 1s;
+}
+
+header{
+    position: static;
+
+ 
+
+    height: 200px;
+    
+    background-size: cover;
+    background-image: url(imgs/img1.webp);
+
+    
+}
+header div{
+    background-color: rgba(128, 128, 128, 0.767);
+    color: white;
+
+    height: 150px;
+
+    padding-top: 50px;
+}
