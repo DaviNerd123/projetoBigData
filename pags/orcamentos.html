@@ -25,7 +25,91 @@
         <div>
              <h1>Projeto Organizador de Festas</h1>
         </div>
-       
     </header>
+    <h1>Calculadora de Preço Total</h1>
+    
+    <form id="product-form">
+        <label for="product-name">Nome do Produto:</label>
+        <input type="text" id="product-name" name="product-name" required>
+        <br>
+        <br>
+        <label for="product-price">Preço por Unidade:</label>
+        <input type="number" id="product-price" name="product-price" required>
+        <br>
+        <br>
+        <label for="product-quantity">Quantidade:</label>
+        <input type="number" id="product-quantity" name="product-quantity" required>
+        <br>
+        <br>
+        <button type="button" id="add-product">Adicionar Produto</button>
+    </form>
+    
+    <h2>Lista de Produtos</h2>
+    <ul id="product-list"></ul>
+    
+    <h2>Total a Pagar:</h2>
+    <p id="total-price">R$ 0.00</p>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productList = document.getElementById('product-list');
+            const totalPrice = document.getElementById('total-price');
+            const productForm = document.getElementById('product-form');
+            
+            let products = [];
+            
+            productForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+            });
+            
+            function updateTotalPrice() {
+                const totalPriceValue = products.reduce((acc, product) => acc + product.total, 0);
+                totalPrice.textContent = `Total a Pagar: R$ ${totalPriceValue.toFixed(2)}`;
+            }
+            
+            function createListItem(product) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${product.name} - R$ ${product.price.toFixed(2)} x ${product.quantity} = R$ ${product.total.toFixed(2)}`;
+                
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Editar';
+                editButton.addEventListener('click', function() {
+                    document.getElementById('product-name').value = product.name;
+                    document.getElementById('product-price').value = product.price;
+                    document.getElementById('product-quantity').value = product.quantity;
+                    
+                    // Remove o produto da lista ao editar
+                    const index = products.indexOf(product);
+                    if (index !== -1) {
+                        products.splice(index, 1);
+                        productList.removeChild(listItem);
+                        updateTotalPrice();
+                    }
+                });
+                
+                listItem.appendChild(editButton);
+                productList.appendChild(listItem);
+            }
+            
+            document.getElementById('add-product').addEventListener('click', function() {
+                const productName = document.getElementById('product-name').value;
+                const productPrice = parseFloat(document.getElementById('product-price').value);
+                const productQuantity = parseInt(document.getElementById('product-quantity').value);
+                
+                if (productName && !isNaN(productPrice) && !isNaN(productQuantity) && productQuantity > 0) {
+                    const productTotal = productPrice * productQuantity;
+                    const product = { name: productName, price: productPrice, quantity: productQuantity, total: productTotal };
+                    
+                    products.push(product);
+                    createListItem(product);
+                    updateTotalPrice();
+                    
+                    document.getElementById('product-name').value = '';
+                    document.getElementById('product-price').value = '';
+                    document.getElementById('product-quantity').value = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
