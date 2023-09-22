@@ -117,3 +117,31 @@ footer{
 
     font-size: xx-small;
 }
+table{
+    
+    border-collapse: collapse;
+
+    text-align: center;
+    width: 1000px;
+
+}
+#t{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center ;
+}
+
+
+td, tr, th, thead{
+    margin: 0px;
+    padding: 0px;
+
+    background-color: white;
+
+}
+th, thead{
+    background-color: darkcyan;
+}
+
