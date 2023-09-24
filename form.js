@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function createListItem(product) {
         const listItem = document.createElement('li');
-        listItem.textContent = `${product.name} - R$ ${product.price.toFixed(2)} x ${product.quantity} = R$ ${product.total.toFixed(2)}`;
+        listItem.textContent = `${product.name}`;
         
         const editButton = document.createElement('button');
+        editButton.style.marginLeft = "30px"
         editButton.textContent = 'Editar';
         editButton.addEventListener('click', function() {
             document.getElementById('product-name').value = product.name;
@@ -75,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('product-price').value = '';
             document.getElementById('product-quantity').value = '';
             tabela.forEach(function (produto){
-                alert(produto.name)
                 tabelaE.innerHTML = tabelaE.innerHTML + `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`
                
                 
