@@ -145,3 +145,7 @@ th, thead{
     background-color: darkcyan;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
