@@ -90,3 +90,4 @@ function inicializar(){
     });
     
 }
+inicializar()
