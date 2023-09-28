@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="../estilos/padrao.css">
+    <link rel="stylesheet" href="../estilos/form.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -11,7 +12,7 @@
         <div id="bmenu">
             <div>
                 <a href="index.html">Lobby</a>
-                <a href="orcamentos.html"><b>$</b></a>
+                
                 <a href="convites.html">Convites</a>
             </div>
             <div id="login">
@@ -23,24 +24,19 @@
     </menu>
     <header>
         <div>
-             <h1>Projeto Organizador de Festas</h1>
+             <h1>Festa: Benificente</h1>
         </div>
     </header>
     <h1>Calculadora de Preço Total</h1>
-    
+    <p>Adicione todos os produtos a serem usados na ffesta (pratos, copos, guardanapos e etc)</p>
     <form id="product-form">
-        <label for="product-name">Nome do Produto:</label>
-        <input type="text" id="product-name" name="product-name" required>
-        <br>
-        <br>
-        <label for="product-price">Preço por Unidade:</label>
-        <input type="number" id="product-price" name="product-price" required>
-        <br>
-        <br>
-        <label for="product-quantity">Quantidade:</label>
-        <input type="number" id="product-quantity" name="product-quantity" required>
-        <br>
-        <br>
+        <div id="label"><label for="product-name" id="name">Nome do Produto:</label>
+        <input type="text" id="product-name" name="product-name" required></div>
+        <div id="label"><label for="product-price">Preço por Unidade:</label>
+        <input type="number" id="product-price" name="product-price" required></div>
+        <div id="label"><label for="product-quantity" id="quantidade">Quantidade:</label>
+        <input type="number" id="product-quantity" name="product-quantity" required></div>
+        
         <button type="button" id="add-product">Adicionar Produto</button>
     </form>
     
@@ -50,8 +46,8 @@
     <h2>Total a Pagar:</h2>
     <p id="total-price">R$ 0.00</p>
     <div id="t">
-        <table>
-                <thead><tr><th>Produto</th><th>Quantidade</th><th>preço</th><th>Total</th><th>Editar</th></tr></thead>
+        <table border="1">
+                <thead><tr><th>Produto</th><th>Quantidade</th><th>preço</th><th>Total</th></tr></thead>
                 <tbody id="corpoTabela">
                 </tbody>
             </table>

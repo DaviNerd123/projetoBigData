@@ -73,7 +73,7 @@ div#login{
 }
 #login a:hover{
     border-radius: 100%;
-    background-color: white;
+
     transition: 1s;
 }
 
@@ -145,3 +145,7 @@ th, thead{
     background-color: darkcyan;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}

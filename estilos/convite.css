@@ -1,0 +1,31 @@
+
+#buttons{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    flex-direction: column;
+}
+
+header{
+    margin-bottom: 30px;
+}
+
+#buttons button{
+    margin-bottom: 10px;
+
+    border-radius: 10%;
+    border: 1px;
+}
+#infantil, #infantil a{
+    background-color: lightblue;
+
+    color: rgb(3, 3, 143);
+    border-color: rgb(3, 3, 143);
+}
+#debutante, #debutante a{
+    background-color: lightpink;
+    border-color: rgb(238, 100, 123) ;
+}
