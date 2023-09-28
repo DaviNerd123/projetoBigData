@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('product-quantity').value = '';
             tabela.forEach(function (produto){
                 alert(produto.name)
-                tabelaE.innerHTML = tabelaE.innerHTML + `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`
+                tabelaE.innerHTML = tabelaE.innerHTML + `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td>
+                </tr>`
                
                 
             })
