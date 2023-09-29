@@ -12,6 +12,9 @@ section{
     flex-direction: column;
     
 }
+section h1{
+    padding-right: 85%;
+}
 article{
     border: 1px ridge black;
 
@@ -36,3 +39,7 @@ article button{
 
 }
 
+img{
+    width: 300px;
+    height: 330px;
+}
