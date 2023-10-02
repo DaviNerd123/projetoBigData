@@ -18,7 +18,8 @@ section h1{
 article{
     border: 1px ridge black;
 
-    width: 50%;
+    width: 709px;
+    height: 340px;
 
     margin-bottom: 20px;
     display: flex;
