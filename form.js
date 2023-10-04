@@ -1,5 +1,59 @@
 const body = document.getElementById("body");
-function inicializar() {
+function inicializarFC(){
+  
+const productList = document.getElementById("product-list");
+    const totalPrice = document.getElementById("total-price");
+    const productForm = document.getElementById("product-form");
+    const tabelaConvidados = [];
+    const tabelaConvidadosE = document.getElementById("corpoTabela");
+
+    let Convidados = [];
+
+    productForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+
+    document
+      .getElementById("add-product")
+      .addEventListener("click", function () {
+        const ConvidadoName = document.getElementById("convidado-name").value;
+        const ConvidadoSex = document.getElementById("product-price").value
+        const ConvidadoAge = document.getElementById("product-quantity").value
+
+        if (
+          ConvidadoName &&
+          !isNaN(ConvidadoSex) &&
+          !isNaN(ConvidadoAge)
+        ) {
+          const product = {
+            name: ConvidadoName,
+            sex: ConvidadoSex,
+            quantity: ConvidadoAge,
+          };
+
+          Convidados.push(product);
+          tabelaConvidados.push(product);
+
+          var ultimo = tabela.length - 1;
+
+          tabelaConvidadosE.innerHTML = "";
+
+          document.getElementById("convidado-name").value = "";
+          document.getElementById("convidado-sex").value = "";
+          document.getElementById("convidado-age").value = "";
+          tabelaConvidados.forEach(function (produto) {
+
+            tabelaConvidadosE.innerHTML =
+              tabelaConvidadosE.innerHTML +
+              `<tr><td>${Convidado.name}</td><td>${Convidado.sex}</td><td>${Convidado.age}</td></tr>`;
+          });
+        }
+      });
+
+
+
+}
+function inicializarFP() {
 
     const productList = document.getElementById("product-list");
     const totalPrice = document.getElementById("total-price");
@@ -359,6 +413,6 @@ const beneficente = function () {
         </div>
 <script src='../form.js'></script>
 </body>`;
-  inicializar();
+  inicializarFP();
 };
-inicializar()
+inicializarFP()
