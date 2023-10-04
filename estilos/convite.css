@@ -19,7 +19,7 @@ article{
     border: 3px ridge black;
 
     width: 709px;
-    height: 340px;
+    height: 330px;
 
     margin-bottom: 20px;
     display: flex;
@@ -48,7 +48,8 @@ img{
     
 }
 .tipo{
-height:340px;
-background-color:yellow;
+height:330;
 width:400px;
+align-items:top;
+justify-content:top;
 }
