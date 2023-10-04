@@ -50,6 +50,5 @@ img{
 .tipo{
 height:330;
 width:400px;
-align-items:top;
-justify-content:top;
+text-align:top;
 }
