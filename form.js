@@ -1,58 +1,5 @@
 const body = document.getElementById("body");
-function inicializarFC(){
-  
-const productList = document.getElementById("product-list");
-    const totalPrice = document.getElementById("total-price");
-    const productForm = document.getElementById("product-form");
-    const tabelaConvidados = [];
-    const tabelaConvidadosE = document.getElementById("corpoTabela");
 
-    let Convidados = [];
-
-    productForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-    });
-
-    document
-      .getElementById("add-product")
-      .addEventListener("click", function () {
-        const ConvidadoName = document.getElementById("convidado-name").value;
-        const ConvidadoSex = document.getElementById("product-price").value
-        const ConvidadoAge = document.getElementById("product-quantity").value
-
-        if (
-          ConvidadoName &&
-          !isNaN(ConvidadoSex) &&
-          !isNaN(ConvidadoAge)
-        ) {
-          const product = {
-            name: ConvidadoName,
-            sex: ConvidadoSex,
-            quantity: ConvidadoAge,
-          };
-
-          Convidados.push(product);
-          tabelaConvidados.push(product);
-
-          var ultimo = tabela.length - 1;
-
-          tabelaConvidadosE.innerHTML = "";
-
-          document.getElementById("convidado-name").value = "";
-          document.getElementById("convidado-sex").value = "";
-          document.getElementById("convidado-age").value = "";
-          tabelaConvidados.forEach(function (produto) {
-
-            tabelaConvidadosE.innerHTML =
-              tabelaConvidadosE.innerHTML +
-              `<tr><td>${Convidado.name}</td><td>${Convidado.sex}</td><td>${Convidado.age}</td></tr>`;
-          });
-        }
-      });
-
-
-
-}
 function inicializarFP() {
 
     const productList = document.getElementById("product-list");
@@ -415,4 +362,113 @@ const beneficente = function () {
 </body>`;
   inicializarFP();
 };
+const debutanteC = function(){
+  body.innerHTML = `<menu>
+  <div id="bmenu">
+  <div>
+  <a href="index.html">Lobby</a>
+  <a href="convites.html">Convites</a>
+  </div>            
+  <div id="login"><div>
+  <a href=""></a>
+  </div>
+              </div>
+          </div>
+      </menu>
+      <header>
+          <div>
+               <h1>Projeto Organizador de Festas</h1>
+          </div>
+         
+      </header>
+  <h1>Formulário</h1>
+  <form id='myForm'>
+  <label for='nome'>Nome:</label>
+  <input type='text' id='nome' name='nome'><br><br>
+  
+  <label for='sexo'>Sexo:</label>
+  <select id='sexo' name='sexo'>
+  <option value='masculino'>Masculino</option>
+  <option value='feminino'>Feminino</option>
+  </select><br><br>
+  
+  <input type='submit' value='Enviar'>
+  </form>
+  
+  <h1>Dados inseridos</h1>
+  <table border='1'>
+  <tr>
+  <th>Nome</th>
+  <th>Sexo</th>
+  </tr>
+  <!-- Os dados do formulário serão inseridos aqui -->
+  </table>
+  
+  <h1>Relação de quantidade entre sexos</h1>
+  <canvas id='myChart' width='400' height='400'></canvas>
+  <button onclick="debutante()">Orçamento</button>
+  
+  <script>
+  const form = document.getElementById('myForm');
+  const table = document.querySelector('table');
+  const chartCanvas = document.getElementById('myChart');
+  
+  const data = {
+  labels: ['Masculino', 'Feminino'],
+  datasets: [{
+  data: [0, 0],
+  backgroundColor: ['gray', 'orange'],
+  }],
+  };
+  
+  const ctx = chartCanvas.getContext('2d');
+  const myChart = new Chart(ctx, {
+  type: 'pie',
+  data: data,
+  });
+  
+  form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  
+  const nomeInput = document.getElementById('nome');
+  const sexoSelect = document.getElementById('sexo');
+  
+  const nome = nomeInput.value;
+  const sexo = sexoSelect.value;
+  
+  // Adiciona os dados à tabela
+  const newRow = table.insertRow(-1);
+  const cell1 = newRow.insertCell(0);
+  const cell2 = newRow.insertCell(1);
+  cell1.innerHTML = nome;
+  cell2.innerHTML = sexo;
+  
+  // Atualiza o gráfico de pizza
+  if (sexo === 'masculino') {
+  data.datasets[0].data[0]++;
+  } else if (sexo === 'feminino') {
+  data.datasets[0].data[1]++;
+  }
+  
+  myChart.update();
+  
+  // Limpa o formulário
+  nomeInput.value = '';
+  sexoSelect.value = 'masculino';
+  });
+  </script>`
+}
+const casamentoC = function(){
+
+}
+const empresarialC = function(){
+
+}
+const infantilC = function(){
+
+}
+const beneficenteC = function(){
+
+}
+
 inicializarFP()
