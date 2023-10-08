@@ -1,63 +1,69 @@
-
-header{
-    margin-bottom: 30px;
+header {
+  margin-bottom: 30px;
 }
 
-section{
-    display: flex;
+section {
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    flex-direction: column;
-    
+  flex-direction: column;
 }
-section h1{
-    padding-right: 85%;
+section h1 {
+  padding-right: 85%;
 }
-article{
-    border: 3px ridge black;
+article {
+  border: 3px ridge black;
 
-    width: 709px;
-    height: 330px;
+  width: 709px;
+  height: 330px;
 
-    margin-bottom: 20px;
-    display: flex;
-justify-content:end;
-}
-
-article button{
-    background-color: rgb(4, 150, 4);
-
-    color: white;
-    
-    border: 0px;
-    
-    
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
 }
 
-img{
-    width: 300px;
-    height: 330px;
-   
-    
-}
-.tipo{
-height:330;
-width:400px;
-text-align:top;
-}
-.tipo p{
-   height:290px;
+article button {
+  background-color: rgb(4, 150, 4);
 
-width:320px;
+  color: white;
 
+  border: 0px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-bottom: 20px;
 }
-.tipo h1{
- padding-left:30px;
+
+img {
+  width: 300px;
+  height: 330px;
+}
+.tipo {
+  height: 330;
+  width: 400px;
+  text-align: top;
+}
+.tipo p {
+  height: 290px;
+
+  width: 320px;
+}
+.tipo h1 {
+  padding-left: 30px;
+}
+article button a {
+  color: white;
+}
+article button a:hover {
+  color: white;
+}
+canvas {
+  width: 100px;
+  height: 100px;
+}
+#pizza {
+  margin-left: 540px;
 }

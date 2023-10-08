@@ -1,118 +1,116 @@
 const body = document.getElementById("body");
 
-function inicializarFP() {
+function inicializar() {
+  const productList = document.getElementById("product-list");
+  const totalPrice = document.getElementById("total-price");
+  const productForm = document.getElementById("product-form");
+  const tabela = [];
+  const tabelaE = document.getElementById("corpoTabela");
 
-    const productList = document.getElementById("product-list");
-    const totalPrice = document.getElementById("total-price");
-    const productForm = document.getElementById("product-form");
-    const tabela = [];
-    const tabelaE = document.getElementById("corpoTabela");
+  let products = [];
 
-    let products = [];
+  productForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
 
-    productForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+  function updateTotalPrice() {
+    const totalPriceValue = products.reduce(
+      (acc, product) => acc + product.total,
+      0
+    );
+    totalPrice.textContent = `Total a Pagar: R$ ${totalPriceValue.toFixed(2)}`;
+  }
+
+  function createListItem(product) {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `<p style"margin-right:10px;">${product.name}</p>`;
+    listItem.style.marginRight = "10px";
+    listItem.style.display = "flex";
+    listItem.style.justifyContent = "center";
+    listItem.style.alignContent = "center";
+
+    const editButton = document.createElement("button");
+    editButton.style.height = "20px";
+    editButton;
+    editButton.textContent = "Editar";
+    editButton.addEventListener("click", function () {
+      document.getElementById("product-name").value = product.name;
+      document.getElementById("product-price").value = product.price;
+      document.getElementById("product-quantity").value = product.quantity;
+
+      // Remove o produto da lista ao editar
+
+      const index = products.indexOf(product);
+      tabela.splice(index, 1);
+      tabelaE.innerHTML = "";
+      tabela.forEach(function (produto) {
+        alert(produto.name);
+        tabelaE.innerHTML =
+          tabelaE.innerHTML +
+          `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`;
+      });
+      if (index !== -1) {
+        products.splice(index, 1);
+        productList.removeChild(listItem);
+
+        updateTotalPrice();
+      }
     });
 
-    function updateTotalPrice() {
-      const totalPriceValue = products.reduce(
-        (acc, product) => acc + product.total,
-        0
-      );
-      totalPrice.textContent = `Total a Pagar: R$ ${totalPriceValue.toFixed(
-        2
-      )}`;
-    }
+    listItem.appendChild(editButton);
+    productList.appendChild(listItem);
+  }
 
-    function createListItem(product) {
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `<p style"margin-right:10px;">${product.name}</p>`;
-      listItem.style.marginRight = "10px"
-      listItem.style.display =  "flex"
-      listItem.style.justifyContent = "center"
-      listItem.style.alignContent = "center"
+  document.getElementById("add-product").addEventListener("click", function () {
+    const productName = document.getElementById("product-name").value;
+    const productPrice = parseFloat(
+      document.getElementById("product-price").value
+    );
+    const productQuantity = parseInt(
+      document.getElementById("product-quantity").value
+    );
 
-      const editButton = document.createElement("button");
-      editButton.style.height = '20px'
-      editButton
-      editButton.textContent = "Editar";
-      editButton.addEventListener("click", function () {
-        document.getElementById("product-name").value = product.name;
-        document.getElementById("product-price").value = product.price;
-        document.getElementById("product-quantity").value = product.quantity;
+    if (
+      productName &&
+      !isNaN(productPrice) &&
+      !isNaN(productQuantity) &&
+      productQuantity > 0
+    ) {
+      const productTotal = productPrice * productQuantity;
+      const product = {
+        name: productName,
+        price: productPrice,
+        quantity: productQuantity,
+        total: productTotal,
+      };
 
-        // Remove o produto da lista ao editar
+      products.push(product);
+      tabela.push(product);
+      createListItem(product);
+      updateTotalPrice();
 
-        const index = products.indexOf(product);
-        tabela.splice(index, 1);
-        tabelaE.innerHTML = "";
-        tabela.forEach(function (produto) {
-          alert(produto.name);
-          tabelaE.innerHTML =
-            tabelaE.innerHTML +
-            `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`;
-        });
-        if (index !== -1) {
-          products.splice(index, 1);
-          productList.removeChild(listItem);
+      var ultimo = tabela.length - 1;
 
-          updateTotalPrice();
-        }
+      tabelaE.innerHTML = "";
+
+      document.getElementById("product-name").value = "";
+      document.getElementById("product-price").value = "";
+      document.getElementById("product-quantity").value = "";
+      tabela.forEach(function (produto) {
+        tabelaE.innerHTML =
+          tabelaE.innerHTML +
+          `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`;
+          
+       
+          
       });
-
-      listItem.appendChild(editButton);
-      productList.appendChild(listItem);
     }
-
-    document
-      .getElementById("add-product")
-      .addEventListener("click", function () {
-        const productName = document.getElementById("product-name").value;
-        const productPrice = parseFloat(
-          document.getElementById("product-price").value
-        );
-        const productQuantity = parseInt(
-          document.getElementById("product-quantity").value
-        );
-
-        if (
-          productName &&
-          !isNaN(productPrice) &&
-          !isNaN(productQuantity) &&
-          productQuantity > 0
-        ) {
-          const productTotal = productPrice * productQuantity;
-          const product = {
-            name: productName,
-            price: productPrice,
-            quantity: productQuantity,
-            total: productTotal,
-          };
-
-          products.push(product);
-          tabela.push(product);
-          createListItem(product);
-          updateTotalPrice();
-
-          var ultimo = tabela.length - 1;
-
-          tabelaE.innerHTML = "";
-
-          document.getElementById("product-name").value = "";
-          document.getElementById("product-price").value = "";
-          document.getElementById("product-quantity").value = "";
-          tabela.forEach(function (produto) {
-
-            tabelaE.innerHTML =
-              tabelaE.innerHTML +
-              `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`;
-          });
-        }
-      });
-
+  });
+ 
 }
 
 const debutante = function () {
+  var ListadeConvidados = convidados
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -163,6 +161,7 @@ const debutante = function () {
   inicializar();
 };
 const casamento = function () {
+  var ListadeConvidados = convidados
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -213,6 +212,7 @@ const casamento = function () {
   inicializar();
 };
 const empresarial = function () {
+  var ListadeConvidados = convidados
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -263,6 +263,7 @@ const empresarial = function () {
   inicializar();
 };
 const infantil = function () {
+  var ListadeConvidados = convidados
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -313,6 +314,8 @@ const infantil = function () {
   inicializar();
 };
 const beneficente = function () {
+  var ListadeConvidados = convidados
+
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -360,115 +363,7 @@ const beneficente = function () {
         </div>
 <script src='../form.js'></script>
 </body>`;
-  inicializarFP();
+  inicializar();
 };
-const debutanteC = function(){
-  body.innerHTML = `<menu>
-  <div id="bmenu">
-  <div>
-  <a href="index.html">Lobby</a>
-  <a href="convites.html">Convites</a>
-  </div>            
-  <div id="login"><div>
-  <a href=""></a>
-  </div>
-              </div>
-          </div>
-      </menu>
-      <header>
-          <div>
-               <h1>Projeto Organizador de Festas</h1>
-          </div>
-         
-      </header>
-  <h1>Formulário</h1>
-  <form id='myForm'>
-  <label for='nome'>Nome:</label>
-  <input type='text' id='nome' name='nome'><br><br>
-  
-  <label for='sexo'>Sexo:</label>
-  <select id='sexo' name='sexo'>
-  <option value='masculino'>Masculino</option>
-  <option value='feminino'>Feminino</option>
-  </select><br><br>
-  
-  <input type='submit' value='Enviar'>
-  </form>
-  
-  <h1>Dados inseridos</h1>
-  <table border='1'>
-  <tr>
-  <th>Nome</th>
-  <th>Sexo</th>
-  </tr>
-  <!-- Os dados do formulário serão inseridos aqui -->
-  </table>
-  
-  <h1>Relação de quantidade entre sexos</h1>
-  <canvas id='myChart' width='400' height='400'></canvas>
-  <button onclick="debutante()">Orçamento</button>
-  
-  <script>
-  const form = document.getElementById('myForm');
-  const table = document.querySelector('table');
-  const chartCanvas = document.getElementById('myChart');
-  
-  const data = {
-  labels: ['Masculino', 'Feminino'],
-  datasets: [{
-  data: [0, 0],
-  backgroundColor: ['gray', 'orange'],
-  }],
-  };
-  
-  const ctx = chartCanvas.getContext('2d');
-  const myChart = new Chart(ctx, {
-  type: 'pie',
-  data: data,
-  });
-  
-  form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  
-  const nomeInput = document.getElementById('nome');
-  const sexoSelect = document.getElementById('sexo');
-  
-  const nome = nomeInput.value;
-  const sexo = sexoSelect.value;
-  
-  // Adiciona os dados à tabela
-  const newRow = table.insertRow(-1);
-  const cell1 = newRow.insertCell(0);
-  const cell2 = newRow.insertCell(1);
-  cell1.innerHTML = nome;
-  cell2.innerHTML = sexo;
-  
-  // Atualiza o gráfico de pizza
-  if (sexo === 'masculino') {
-  data.datasets[0].data[0]++;
-  } else if (sexo === 'feminino') {
-  data.datasets[0].data[1]++;
-  }
-  
-  myChart.update();
-  
-  // Limpa o formulário
-  nomeInput.value = '';
-  sexoSelect.value = 'masculino';
-  });
-  </script>`
-}
-const casamentoC = function(){
 
-}
-const empresarialC = function(){
-
-}
-const infantilC = function(){
-
-}
-const beneficenteC = function(){
-
-}
-
-inicializarFP()
+inicializar();

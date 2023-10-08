@@ -1,77 +1,80 @@
-body{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+body {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-    height: 110vh;
-    
+  height: 110vh;
 }
-#label{
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    padding-left: 225px;
+#label {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  padding-left: 225px;
 }
-label{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 6px;
+label {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
 }
-form{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-    border: 1px black ridge;
-    margin-left: 37%;
-    margin-right: 37%;
+  border: 1px black ridge;
+  margin-left: 37%;
+  margin-right: 37%;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-    width: 400px;
+  width: 400px;
 }
-input:focus, textarea:focus, input, textarea{
+input:focus,
+textarea:focus,
+input,
+textarea {
+  outline: none;
+  box-shadow: 0px 0px 0px 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
 
-    outline: none;
-    box-shadow: 0px 0px 0px 0px ;
-    border-right: none;
-    border-left: none;
-    border-top: none;
+  padding-top: 6px;
+}
+#quantidade {
+  padding-left: 46px;
+}
+#name {
+  padding-left: 6px;
+}
+input {
+  height: 15px;
+}
+form button {
+  width: 170px;
+}
+h2,
+p {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#add-product {
+  background-color: rgb(4, 150, 4);
 
-    padding-top: 6px;
-}
-#quantidade{
-    padding-left: 46px;
-}
-#name{
-    padding-left: 6px;
-}
-input{
-    height: 15px;
-}
-form button{
-    width: 170px;
-}
-h2, p{
-    text-align: center;
-    padding-left:50px;
-    padding-right: 50px;
-  }
-  #add-product{
+  color: white;
 
-    background-color: rgb(4, 150, 4);
+  border: 0px;
 
-    color: white;
-    
-    border: 0px;
-    
-    margin-top: 20px;
+  margin-top: 20px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+

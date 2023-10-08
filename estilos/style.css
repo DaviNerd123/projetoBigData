@@ -28,3 +28,10 @@ p{
   padding: 10px 10px 10px 10px;
   margin: 5px;
 }
+canvas{
+  width: 100px;
+  height: 100px;
+}
+div{
+  display: initial;
+}
