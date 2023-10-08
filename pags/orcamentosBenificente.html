@@ -38,7 +38,9 @@
       <select id="sexo" name="sexo">
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option></select
-      ><br /><br />
+      ><br />
+      <label for="Idade">Idade</label>
+      <input type="number " name="Idade" id="idade"></br>
 
       <input
         type="submit"
@@ -60,11 +62,11 @@
 
     <h1>Dados inseridos</h1>
     <div id="t">
-      <table border="1">
+      <table  border="1" id="table">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Sexo</th>
+            <th  border="1">Nome</th>
+            <th  border="1">Sexo</th><th  border="1">Idade</th>
           </tr>
         </thead>
         <tbody id="corpoTabela"></tbody>
@@ -73,17 +75,91 @@
 
     <h1>Relação de quantidade entre sexos</h1>
     <div style="width: 400px; height: 400px" id="pizza">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+    <div id="t">
+      <table  border="1" id="table" id="tabF">
+        <thead>
+          <tr>
+            <th  border="1">Classe</th>
+            <th  border="1">Frequencia Absoluta</th><th  border="1">Frequencia Relativa</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <tr>
+            <th  border="1">0|--10</th>
+            <td id="Fa1"></td>
+            <td id="Fr1"></td>
+          </tr>
+          <tr>
+            <th  border="1">10|--20</th>
+            <td id="Fa2"></td>
+            <td id="Fr2"></td>
+          </tr>
+          <tr>
+            <th  border="1">20|--30</th>
+            <td id="Fa3"></td>
+            <td id="Fr3"></td>
+          </tr>
+
+          <tr>
+            <th  border="1">30|--40</th>
+            <td id="Fa4"></td>
+            <td id="Fr4"></td>
+          </tr>
+          <tr>
+            <th  border="1">40|--50</th>
+            <td id="Fa5"></td>
+            <td id="Fr5"></td>
+          </tr>
+          <tr>
+            <th  border="1">50|--60</th>
+            <td  id="Fa6"></td>
+            <td id="Fr6"></td>
+          </tr>
+          <tr>
+            <th  border="1">60|--70</th>
+            <td id="Fa7"></td>
+            <td id="Fr7"></td>
+          </tr>
+          <tr>
+            <th  border="1">70|--80</th>
+            <td id="Fa8"></td>
+            <td id="Fr8"></td>
+          </tr>
+          <tr>
+            <th  border="1">80|--90</th>
+            <td id="Fa9"></td>
+            <td id="Fr9"></td>
+          </tr>
+          <tr>
+            <th  border="1">90|--100</th>
+            <td id="Fa10"></td>
+            <td id="Fr10"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
       <canvas id="myChart" width="10" height="10"></canvas>
     </div>
+
 
     <button onclick="beneficente()">Orçamento</button>
     <script src="../form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script>
+      let classe = [Zd=[], Dv=[], Vt=[], Tq=[], Qc=[], Cs=[], Ss=[],So=[],On=[], Nc=[]]
       let convidados = [];
       const form = document.getElementById("myForm");
-      const table = document.querySelector("table");
+      const table = document.getElementById("table");
+      const tabF = document.getElementById("tabF")
       const chartCanvas = document.getElementById("myChart");
+      function FrequenciaA(x){
+        return x.length
+      }
+      function FrequenciaR(x){
+        return x/total
+      }
 
       const data = {
         labels: ["Masculino", "Feminino"],
@@ -103,24 +179,72 @@
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-
+        let total = 0
+        const totalconta = classe.forEach((x, y)=>{
+          total = total+x.length
+        })
         const nomeInput = document.getElementById("nome");
         const sexoSelect = document.getElementById("sexo");
+        const idadeI = document.getElementById('idade')
 
         const nome = nomeInput.value;
         const sexo = sexoSelect.value;
+        const idade = idadeI.value;
         const convidado = {
           nome: nome,
           sexo: sexo,
+          idade: idade,
         };
+        if(idade <10){
+          classe[0].push(convidado)
+        }else{
+          if(idade < 20){
+            classe[1].push(convidado)
+          }else{
+            if(idade <30){
+              classe[2].push(convidado)
+            }else{
+              if(idade<40){
+                classe[3].push(convidado)
+              }else{
+                if(idade<50){
+                  classe[4].push(convidado)
+                }else{
+                  if(idade<60){
+                    classe.push[5](convidado)
+                  }else{
+                  if(idade<70){
+                    classe.push[6](convidado)
+                  }else{
+                  if(idade<80){
+                    classe.push[7](convidado)
+                  }else{
+                  if(idade<90){
+                    classe.push[8](convidado)
+                  }else{
+                  if(idade<100){
+                    classe.push[9](convidado)
+                  }
+                }
+                }
+                }
+                }
+                }
+              }
+            }
+          }
+        }
+
         convidados.push(convidado);
 
         // Adiciona os dados à tabela
         const newRow = table.insertRow(-1);
         const cell1 = newRow.insertCell(0);
         const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2)
         cell1.innerHTML = nome;
         cell2.innerHTML = sexo;
+        cell3.innerHTML = idade
 
         // Atualiza o gráfico de pizza
         if (sexo === "masculino") {

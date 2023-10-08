@@ -100,17 +100,16 @@ function inicializar() {
         tabelaE.innerHTML =
           tabelaE.innerHTML +
           `<tr><td>${produto.name}</td><td>${produto.quantity}</td><td>${produto.price}</td><td>${produto.total}</td></tr>`;
-          
-       
-          
       });
     }
   });
- 
 }
+const Finalizar = function () {
+  body = ``
+};
 
 const debutante = function () {
-  var ListadeConvidados = convidados
+  var ListadeConvidados = convidados;
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -156,12 +155,13 @@ const debutante = function () {
             </tbody>
         </table>
         </div>
+        <button onclick='Finalizar'>Finalizar</button>
 <script src='../form.js'></script>
 </body>`;
   inicializar();
 };
 const casamento = function () {
-  var ListadeConvidados = convidados
+  var ListadeConvidados = convidados;
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -207,12 +207,13 @@ const casamento = function () {
             </tbody>
         </table>
         </div>
+        <button onclick='Finalizar'>Finalizar</button>
 <script src='../form.js'></script>
 </body>`;
   inicializar();
 };
 const empresarial = function () {
-  var ListadeConvidados = convidados
+  var ListadeConvidados = convidados;
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -258,12 +259,13 @@ const empresarial = function () {
             </tbody>
         </table>
         </div>
+        <button onclick='Finalizar'>Finalizar</button>
 <script src='../form.js'></script>
 </body>`;
   inicializar();
 };
 const infantil = function () {
-  var ListadeConvidados = convidados
+  var ListadeConvidados = convidados;
   body.innerHTML = `<body>
 <menu>
     <div id='bmenu'>
@@ -309,12 +311,13 @@ const infantil = function () {
             </tbody>
         </table>
         </div>
+        <button onclick='Finalizar'>Finalizar</button>
 <script src='../form.js'></script>
 </body>`;
   inicializar();
 };
 const beneficente = function () {
-  var ListadeConvidados = convidados
+  var ListadeConvidados = convidados;
 
   body.innerHTML = `<body>
 <menu>
@@ -361,6 +364,7 @@ const beneficente = function () {
             </tbody>
         </table>
         </div>
+        <button onclick='Finalizar'>Finalizar</button>
 <script src='../form.js'></script>
 </body>`;
   inicializar();

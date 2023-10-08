@@ -60,11 +60,11 @@
   
       <h1>Dados inseridos</h1>
       <div id="t">
-        <table border="1">
+        <table  border="1" id="table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Sexo</th>
+              <th  border="1">Nome</th>
+              <th  border="1">Sexo</th>
             </tr>
           </thead>
           <tbody id="corpoTabela"></tbody>
@@ -73,6 +73,71 @@
   
       <h1>Relação de quantidade entre sexos</h1>
      <div style="width: 400px; height: 400px" id="pizza">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+   <div id="t">
+      <table  border="1" id="table" id="tabF">
+        <thead>
+          <tr>
+            <th  border="1">Classe</th>
+            <th  border="1">Frequencia Absoluta</th><th  border="1">Frequencia Relativa</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <tr>
+            <th  border="1">0|--10</th>
+            <td id="Fa1"></td>
+            <td id="Fr1"></td>
+          </tr>
+          <tr>
+            <th  border="1">10|--20</th>
+            <td id="Fa2"></td>
+            <td id="Fr2"></td>
+          </tr>
+          <tr>
+            <th  border="1">20|--30</th>
+            <td id="Fa3"></td>
+            <td id="Fr3"></td>
+          </tr>
+
+          <tr>
+            <th  border="1">30|--40</th>
+            <td id="Fa4"></td>
+            <td id="Fr4"></td>
+          </tr>
+          <tr>
+            <th  border="1">40|--50</th>
+            <td id="Fa5"></td>
+            <td id="Fr5"></td>
+          </tr>
+          <tr>
+            <th  border="1">50|--60</th>
+            <td  id="Fa6"></td>
+            <td id="Fr6"></td>
+          </tr>
+          <tr>
+            <th  border="1">60|--70</th>
+            <td id="Fa7"></td>
+            <td id="Fr7"></td>
+          </tr>
+          <tr>
+            <th  border="1">70|--80</th>
+            <td id="Fa8"></td>
+            <td id="Fr8"></td>
+          </tr>
+          <tr>
+            <th  border="1">80|--90</th>
+            <td id="Fa9"></td>
+            <td id="Fr9"></td>
+          </tr>
+          <tr>
+            <th  border="1">90|--100</th>
+            <td id="Fa10"></td>
+            <td id="Fr10"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
         <canvas id="myChart" width="100" height="100"></canvas>
       </div>
   
@@ -81,7 +146,7 @@
 
     <script>
       const form = document.getElementById("myForm");
-      const table = document.querySelector("table");
+      const table = document.getElementById("table");
       const chartCanvas = document.getElementById("myChart");
 
       const data = {

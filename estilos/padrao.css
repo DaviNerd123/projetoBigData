@@ -143,6 +143,9 @@ td, tr, th, thead{
     width: 250px;
 
 }
+th{
+    border:1px black ridge;
+}
 th, thead{
     background-color: darkcyan;
 }
