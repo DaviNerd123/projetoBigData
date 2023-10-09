@@ -35,6 +35,10 @@ article button {
   padding-bottom: 10px;
 
   margin-bottom: 20px;
+  margin-top: 0px;
+}
+button{
+  margin-top: 20px;
 }
 
 img {

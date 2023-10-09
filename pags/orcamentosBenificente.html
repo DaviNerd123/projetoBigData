@@ -81,7 +81,7 @@
       <table  border="1" id="table" id="tabF">
         <thead>
           <tr>
-            <th  border="1">Classe</th>
+            <th  border="1">Idade</th>
             <th  border="1">Frequencia Absoluta</th><th  border="1">Frequencia Relativa</th>
           </tr>
         </thead>
@@ -150,15 +150,37 @@
     <script>
       let classe = [Zd=[], Dv=[], Vt=[], Tq=[], Qc=[], Cs=[], Ss=[],So=[],On=[], Nc=[]]
       let convidados = [];
+      var total = 0
       const form = document.getElementById("myForm");
       const table = document.getElementById("table");
       const tabF = document.getElementById("tabF")
       const chartCanvas = document.getElementById("myChart");
+      var Fa1 = document.getElementById("Fa1")
+      var Fr1 = document.getElementById("Fr1")
+      var Fa2 = document.getElementById("Fa2")
+      var Fr2 = document.getElementById("Fr2")
+      var Fa3 = document.getElementById("Fa3")
+      var Fr3 = document.getElementById("Fr3")
+      var Fa4 = document.getElementById("Fa4")
+      var Fr4 = document.getElementById("Fr4")
+      var Fa5 = document.getElementById("Fa5")
+      var Fr5 = document.getElementById("Fr5")
+      var Fa6 = document.getElementById("Fa6")
+      var Fr6 = document.getElementById("Fr6")
+      var Fa7 = document.getElementById("Fa7")
+      var Fr7 = document.getElementById("Fr7")
+      var Fa8 = document.getElementById("Fa8")
+      var Fr8 = document.getElementById("Fr8")
+      var Fa9 = document.getElementById("Fa9")
+      var Fr9 = document.getElementById("Fr9")
+      var Fa10 = document.getElementById("Fa10")
+      var Fr10 = document.getElementById("Fr10")
       function FrequenciaA(x){
         return x.length
       }
       function FrequenciaR(x){
-        return x/total
+        var y = (x/total)*100
+        return y
       }
 
       const data = {
@@ -179,10 +201,9 @@
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        let total = 0
-        const totalconta = classe.forEach((x, y)=>{
-          total = total+x.length
-        })
+        
+          total = total+1
+        
         const nomeInput = document.getElementById("nome");
         const sexoSelect = document.getElementById("sexo");
         const idadeI = document.getElementById('idade')
@@ -197,33 +218,240 @@
         };
         if(idade <10){
           classe[0].push(convidado)
+          Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+
+
+
         }else{
           if(idade < 20){
             classe[1].push(convidado)
+            Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+            
           }else{
             if(idade <30){
               classe[2].push(convidado)
+              Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+
             }else{
               if(idade<40){
                 classe[3].push(convidado)
+                Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
               }else{
                 if(idade<50){
                   classe[4].push(convidado)
+                  Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
                 }else{
                   if(idade<60){
                     classe.push[5](convidado)
+                    Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
                   }else{
                   if(idade<70){
                     classe.push[6](convidado)
+                    Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
                   }else{
                   if(idade<80){
                     classe.push[7](convidado)
+                    Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+
                   }else{
                   if(idade<90){
                     classe.push[8](convidado)
+                    Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+
                   }else{
                   if(idade<100){
                     classe.push[9](convidado)
+                    Fa1.innerText = FrequenciaA(classe[0])
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
                   }
                 }
                 }
