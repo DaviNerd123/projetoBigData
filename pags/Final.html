@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="../estilos/padrao.css" />
+    <link rel="stylesheet" href="../estilos/form.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../estilos/convite.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <menu>
+      <div id="bmenu">
+        <div>
+          <a href="index.html">Lobby</a>
+
+          <a href="convites.html">Convites</a>
+        </div>
+        <div id="login">
+          <div>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </menu>
+    <header>
+      <div>
+        <h1>Festa:Beneficente</h1>
+      </div>
+    </header>
+    <h1>Locação e Entretenimento</h1>
+    <div id="t">
+      <table border="1" id="table2">
+        <thead>
+          <tr>
+            <th border="1">Tamanho</th>
+            <th border="1">Preço</th>
+            <th border="1">quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>50m²</td>
+            <td>R$150,00</td>
+            <td>100 Pessoas</td>
+          </tr>
+          <tr>
+            <td>100m²</td>
+            <td>R$320,00</td>
+            <td>200 Pessoas</td>
+          </tr>
+          <tr>
+            <td>120m²</td>
+            <td>R$350,00</td>
+            <td>240 Pessoas</td>
+          </tr>
+          <tr>
+            <td>150m²</td>
+            <td>R$470,00</td>
+            <td>300 Pessoas</td>
+          </tr>
+        </tbody>
+        <tbody id="corpoTabela"></tbody>
+      </table>
+    </div>
+    <h1>Formulários</h1>
+    <div id="formulario">
+      <form id="Entretenimento">
+        <div>
+          <input type="checkbox" id="Ator" name="atoir" />
+          <label for="Ator">Ator</label>
+          <input type="checkbox" id="Cantor" name="Cantor" />
+          <label for="Cantor">Cantor</label>
+        </div>
+        <div>
+          <input type="checkbox" id="Dj" name="Dj" />
+          <label for="Dj">Dj</label>
+          <input type="checkbox" id="Magico" name="Magico" />
+          <label for="Magico">Mágico</label>
+          <input type="checkbox" id="Inflaveis" name="Inflaveis" />
+          <label for="Inflaveis">Inflaveis</label>
+          <input
+            type="submit"
+            value="Enviar"
+            style="
+              height: 40px;
+              width: 50px;
+              text-decoration: none;
+              background-color: rgb(4, 150, 4);
+
+              color: white;
+
+              border: 0px;
+
+              padding-top: 10px;
+              padding-bottom: 10px;
+              margin-left: 30%;
+            "
+          />
+        </div>
+        <div>
+          <input type="checkbox" id="Palhaço" name="Palhaço" />
+          <label for="Palhaço">Palhaço</label>
+          <input type="checkbox" id="Fliperama" name="Fliperama" />
+          <label for="Fliperama">Fliperama</label>
+        </div>
+      </form>
+    </div>
+
+    <br /><br />
+    <h2>Finalização do Pedido</h2>
+    <form id="Final">
+      <div id='label'> <label for='locacao' id='locacao' style="margin-left: 250px;">Locação</label><select id="Locação" name="Locação">
+
+        
+        <option value="50m²">50m²</option>
+        <option value="100m²">100m²</option>
+        <option value="120m²">120m²</option>
+        <option value="150m²">Louça</option>    
+      </select>
+      <div id="label"><label for="orcamento">Orçamento Disponivel</label><input type="number" name="orcamento" id="orcamento"></div>
+    </form>
+
+    <script src="../form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  </body>
+</html>

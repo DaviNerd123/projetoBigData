@@ -76,5 +76,43 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+#Entretenimento{
+  flex-direction: row;
+  position: unset;
+}
+#Entretenimento div{
+  display: flex;
+  flex-direction: column;
 
+  width: 200px;
+  height: 200px;
+}
+#Entretenimento input, label{
+  display: inline-block;
+  
+}
+#formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+#Final{
+  border: 0px;
+  font-size: large;
 
+  width: 100%;
+  background-color: antiquewhite;
+
+  margin-left: 0px;
+  padding: 0px;
+  margin: 0%;
+  
+  height: 500px;
+  
+  align-items: start;
+  justify-content: initial;
+}
+#Final label{
+  width: 200px;
+}
