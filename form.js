@@ -128,6 +128,8 @@ function inicializar() {
       tabela.push(product);
       updateTotalPrice();
 
+      var t =document.querySelector("table")
+      t.style.display = "table"
       var ultimo = tabela.length - 1;
 
       tabelaE.innerHTML = "";

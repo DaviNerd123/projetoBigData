@@ -29,36 +29,33 @@
         <h1>Festa:Debutante</h1>
       </div>
     </header>
-    <h1>Formulário</h1>
-    <form id="myForm">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" /><br /><br />
-
-      <label for="sexo">Sexo:</label>
-      <select id="sexo" name="sexo">
-        <option value="masculino">Masculino</option>
-        <option value="feminino">Feminino</option></select
-      ><br />
-      <label for="Idade">Idade</label>
-      <input type="number " name="Idade" id="idade"></br>
-
-      <input
-        type="submit"
-        value="Enviar"
-        style="
-          height: 40px;
-          text-decoration: none;
-          background-color: rgb(4, 150, 4);
-
-          color: white;
-
-          border: 0px;
-
-          padding-top: 10px;
-          padding-bottom: 10px;
-        "
-      />
-    </form>
+    <div id="fm">
+      <h1>Formulário</h1>
+      <form id="myForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" /><br /><br />
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo">
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option></select
+        ><br />
+        <label for="Idade">Idade</label>
+ <select type="number " name="Idade" id="idade">></select></br>
+        <input
+          type="submit"
+          value="Enviar"
+          style="
+            height: 40px;
+            text-decoration: none;
+            background-color: rgb(4, 150, 4);
+            color: white;
+            border: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          "
+        />
+      </form>
+    </div>
 
     <h1>Dados inseridos</h1>
     <div id="t">
@@ -74,8 +71,10 @@
     </div>
 
     <h1>Relação de quantidade entre sexos</h1>
-    <div style="width: 400px; height: 400px" id="pizza">
-      <canvas id="myChart" width="100" height="100"></canvas>
+    <div style=" height: 400px" id="pizza">
+      <div style="width: 400px;height: 400px;">
+        <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
     </div>
    <div id="t">
       <table  border="1" id="table" id="tabF">
@@ -144,10 +143,16 @@
     </div>
 
 
-    <button><a href="Od.html">Orçamento</a></button>
+    <div id="orc"><button><a href="Od.html">Orçamento</a></button></div>
     <script src="../form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script>
+      var inputI = document.getElementById("idade")
+      var n =0
+      while(n<100){
+        inputI.innerHTML = `${inputI.innerHTML}<option value="${n}">${n}</option>`
+        n++
+      }
       let classe = [Zd=[], Dv=[], Vt=[], Tq=[], Qc=[], Cs=[], Ss=[],So=[],On=[], Nc=[]]
       let convidados = [];
       var total = 0

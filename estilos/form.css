@@ -26,8 +26,6 @@ form {
   align-items: center;
 
   border: 1px black ridge;
-  margin-left: 37%;
-  margin-right: 37%;
 
   padding-top: 20px;
   padding-bottom: 20px;
@@ -45,6 +43,12 @@ textarea {
   border-top: none;
 
   padding-top: 6px;
+}
+#fm {
+  align-items: center;
+
+  flex-direction: column;
+  display: flex;
 }
 #quantidade {
   padding-left: 46px;
@@ -76,28 +80,28 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#Entretenimento{
+#Entretenimento {
   flex-direction: row;
   position: unset;
 }
-#Entretenimento div{
+#Entretenimento div {
   display: flex;
   flex-direction: column;
 
   width: 200px;
   height: 200px;
 }
-#Entretenimento input, label{
+#Entretenimento input,
+label {
   display: inline-block;
-  
 }
-#formulario{
+#formulario {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 250px;
 }
-#Final{
+#Final {
   border: 0px;
   font-size: large;
 
@@ -107,12 +111,26 @@ p {
   margin-left: 0px;
   padding: 0px;
   margin: 0%;
-  
+
   height: 500px;
-  
+
   align-items: start;
   justify-content: initial;
 }
-#Final label{
+#Final label {
   width: 200px;
+}
+table {
+  display: none;
+}
+#orc{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+}
+#orc button, #orc a{
+  margin: 0px;
+  color: white;
 }
