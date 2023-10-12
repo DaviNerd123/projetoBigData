@@ -8,8 +8,10 @@ body {
 #label {
   display: flex;
   flex-direction: row;
-  width: 500px;
-  padding-left: 225px;
+  text-align: center;
+;
+  text-align: center;
+
 }
 label {
   text-align: center;
@@ -107,7 +109,7 @@ label {
   font-size: large;
 
   width: 100%;
-  background-color: antiquewhite;
+
 
   margin-left: 0px;
   padding: 0px;
@@ -115,8 +117,10 @@ label {
 
   height: 500px;
 
-  align-items: start;
+  align-items: center;
   justify-content: initial;
+
+  flex-direction: column;
 }
 #Final label {
   width: 200px;
@@ -126,6 +130,7 @@ table {
 }
 #orc {
   display: flex;
+  
   width: 100%;
   align-items: center;
   justify-content: center;
