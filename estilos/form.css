@@ -45,7 +45,6 @@ textarea {
   padding-top: 6px;
 }
 #fm {
-
   width: 100%;
   align-items: center;
 
@@ -125,14 +124,14 @@ label {
 table {
   display: none;
 }
-#orc{
+#orc {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
-
 }
-#orc button, #orc a{
+#orc button,
+#orc a {
   margin: 0px;
   color: white;
 }

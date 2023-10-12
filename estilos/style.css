@@ -1,25 +1,23 @@
-
-section{
+section {
   text-align: center;
 }
 
-
-h2{
-  text-align: left;
-  padding-left:50px;
-  padding-right: 50px;
-}
-h5{
+h2 {
   text-align: left;
   padding-left: 50px;
   padding-right: 50px;
 }
-p{
+h5 {
   text-align: left;
   padding-left: 50px;
   padding-right: 50px;
 }
-.buttonicio{
+p {
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.buttonicio {
   position: relative;
   left: 850px;
   border-radius: 8px;
@@ -28,10 +26,10 @@ p{
   padding: 10px 10px 10px 10px;
   margin: 5px;
 }
-canvas{
+canvas {
   width: 100px;
   height: 100px;
 }
-div{
+div {
   display: initial;
 }
