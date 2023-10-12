@@ -87,6 +87,7 @@ function inicializar() {
 
   document.getElementById("add-product").addEventListener("click", function () {
     const productName = document.getElementById("product-name").value;
+    alert("Oi")
     const productType = document.getElementById("Tipo").value;
     const productPrice = parseFloat(
       document.getElementById("product-price").value
@@ -166,6 +167,7 @@ function inicializar() {
   });
 
 }
+inicializar()
 const Finalizar = function () {
   Final = Final
   var pFinal =  Final.toFixed(2)
