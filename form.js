@@ -248,5 +248,3 @@ product.addEventListener("click", function (event) {
 
 
 };
-
-
