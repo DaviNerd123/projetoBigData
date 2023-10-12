@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilos/padrao.css" />
+    <link rel="stylesheet" href="../estilos/form.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../estilos/convite.css" />
+</head>
+<body style="height: 70vh;">
+    <menu>
+        <div id="bmenu">
+          <div>
+            <a href="index.html">Lobby</a>
+    
+            <a href="convites.html">Convites</a>
+          </div>
+    
+        </div>
+      </menu>
+      <header>
+        <div>
+          <h1>Festa:Beneficente</h1>
+        </div>
+      </header>
+      <h1>Finalização do Pedido</h2>
+      <form id="Final" style="height: auto;">
+    
+        <div id="label"><label for="juros">juros</label>
+          <select id="tipoj" name="Tipoj" id="tipoj">
+            <option value="Simples">Simples: 5%</option>
+            <option value="Composto">Composto: 2%</option>  
+          </select></div><br>   <div id='label'><br><br> <label for='FormadePagamento' id='FormadePagamento' style="">Forma de Pagamento</label><select id="Forma-de-Pagamento" name="FormadePagamento">
+          <option value="débito">débito</option>
+          <option value="crédito">crédito</option>
+          <option value="boleto">boleto</option>
+          <option value="pix">pix</option>    
+        </select></div><br>
+        <div id="label"><label for="Tempo">Parcelas</label>
+          <select id="meses" name="meses">
+          </select></div>
+        <label for="ValorEmprestimo">Valor do Empréstimo: R$</label>
+        <input type="number" id="valorDoE" name="ValorDoEmprestimo"><br><br>
+        <p id="ValorASerPago" style="display:none;">Valor a ser pago: R$</p>
+        <button id="escolher"
+        onclick="escolher()"
+        style="height: 40px;text-decoration: none;background-color: rgb(4, 150, 4);color: white;border:0px;padding-top: 10px;padding-bottom: 10px; margin: 0px;">Escolher</button></div>
+      </form>
+      <div> 
+     
+      <script src="../form.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+      <script>      var escolher = document.getElementById("escolher")
+
+      while(n<13){
+        inputI.innerHTML = `${inputI.innerHTML}<option value="${n}">${n} meses</option>`
+        if(n==1){
+            inputI.innerHTML = `<option value="${n}">${n} mês</option>`
+        }
+        n++
+      }
+      var vap = document.getElementById("ValorASerPago")
+      </script>
+</body>
+</html>

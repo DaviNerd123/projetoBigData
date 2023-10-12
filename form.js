@@ -201,6 +201,7 @@ const Finalizar = function () {
     <option value="pix">pix</option>    
   </select></div><br>
   <p id="ValorFinal">Valor a se pagar: R$</p>
+
   <input id="pagar"
   type="submit"
   value="Pagar"
@@ -213,7 +214,19 @@ const Finalizar = function () {
     padding-top: 10px;
     padding-bottom: 10px;
   "
-/>
+/></br>
+<div id="em" style="display:none;">
+<p id="ValorFaltante">Valor que falta:R$</p>
+<p>Você não possui dinheiro o suficiente para pagar, recomendamos que faça um empréstimo</p></br>
+<a href="emprestimo.html" style="
+height: 20px;
+text-decoration: none;
+background-color: rgb(4, 150, 4);
+color: white;
+border: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+"> Fazer empréstimo</a></div>
 
 </form>
 <script src="../form.js"></script>
@@ -226,74 +239,12 @@ var form = document.querySelector("form")
 product.addEventListener("click", function (event) {
   var orcamento = document.getElementById("orcamento").value
   if(orcamento< Final){
-    var emprestimo = Final - orcamento
-    body.innerHTML = `    <menu>
-    <div id="bmenu">
-      <div>
-        <a href="index.html">Lobby</a>
-
-        <a href="convites.html">Convites</a>
-      </div>
-
-    </div>
-  </menu>
-  <header>
-    <div>
-      <h1>Festa:Beneficente</h1>
-    </div>
-  </header>
-  <h1>Finalização do Pedido</h2>
-  <form id="Final">
-
-    <div id="label"><label for="juros">juros</label>
-      <select id="tipoj" name="Tipoj">
-        <option value="Simples">Simples: 5%</option>
-        <option value="Composto">Composto: 2%</option>  
-      </select></div><br>   <div id='label'><br><br> <label for='FormadePagamento' id='FormadePagamento' style="">Forma de Pagamento</label><select id="Forma-de-Pagamento" name="FormadePagamento">
-      <option value="débito">débito</option>
-      <option value="crédito">crédito</option>
-      <option value="boleto">boleto</option>
-      <option value="pix">pix</option>    
-    </select></div><br>
-    <div id="label"><label for="Tempo">Parcelas</label>
-      <select id="meses" name="meses">
-      </select></div>
-    <p id="ValorEmprestimo">Valor do Empréstimo: R$</p>
-    <p id="ValorASerPago">Valor a ser pago: R$</p>
-    <input
-    type="submit"
-    value="Pagar"
-    style="
-      height: 40px;
-      text-decoration: none;
-      background-color: rgb(4, 150, 4);
-      color: white;
-      border: 0px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    "
-  />
-
-  </form>
-  <script src="../form.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>`
-    var inputI = document.getElementById("meses")
-    var valorE = document.getElementById("ValorEmprestimo")
-    valorE.innerText = valorE.innerText +emprestimo
-    var n =1
-    while(n<13){
-      inputI.innerHTML = `${inputI.innerHTML}<option value="${n}">${n} meses</option>`
-      if (n == 1){
-        inputI.innerHTML = inputI.innerHTML - `<option value="${n}">${n} meses</option>` + `<option value="${n}">${n} mês</option>`
-      }
-      n++
-    }
-
-  }
+    document.getElementById("em").style.display ="initial"
   alert("oi")
+  document.getElementById("ValorFaltante").innerText =    document.getElementById("ValorFaltante").innerText + (Final - orcamento).toFixed(2)
   body.innerHTML = body.innerHTML
 
-})
+}})
 
 
 };
