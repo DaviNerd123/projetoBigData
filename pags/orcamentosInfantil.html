@@ -78,7 +78,7 @@
       </div>
     </div>
    <div id="t">
-      <table  border="1" id="table" id="tabF">
+      <table  border="1"  id="tabF">
         <thead>
           <tr>
             <th  border="1">Idade</th>
@@ -184,7 +184,7 @@
         return x.length
       }
       function FrequenciaR(x){
-        var y = (x/total)*100
+        var y = parseInt((x/total)*100)
         return y
       }
 
@@ -207,7 +207,12 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         
+        
           total = total+1
+          var t =document.querySelector("table")
+          t.style.display = "table"
+          var t2 = document.getElementById("tabF")
+          t2.style.display = "table"
         
         const nomeInput = document.getElementById("nome");
         const sexoSelect = document.getElementById("sexo");

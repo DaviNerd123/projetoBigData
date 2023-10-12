@@ -31,6 +31,8 @@
     </header>
     <h1>Calculadora de Preço Total</h1>
     <p>Adicione todos os produtos a serem usados na festa (pratos, copos, guardanapos e etc)</p>
+
+<div id="fm">
     <form id='product-form'>
         <div id='label'><label for='product-name' id='name'>Nome do Produto:</label>
         <input type='text' id='product-name' name='product-name' required></div>
@@ -39,7 +41,9 @@
         <option value="Bebida">Bebida</option>
         <option value="Talher">Talher</option>
         <option value="Louça">Louça</option>
-        <option value="Decoração">Decoração</option>
+               <option value="Decoração">Decoração</option>
+        <option value="Entretenimento">Entretetenimento</option>
+        <option value="Entretenimento">Entretetenimento</option>
     
         </select
       ><br /></div>
@@ -47,15 +51,18 @@
         <input type='number' id='product-price' name='product-price' required></div>
         <div id='label'><label for='product-quantity' id='quantidade'>Quantidade:</label>
         <input type='number' id='product-quantity' name='product-quantity' required></div>
-        
+    
         <button type='button' id='add-product'>Adicionar Produto</button>
     </form>
+</div>
     
     
     
     <h2>Total a Pagar:</h2>
-    <div style="width: 400px; height: 400px" id="pizza">
-    <canvas id="myChart" width="100" height="100"></canvas>
+    <div style=" height: 400px" id="pizza">
+      <div style="width: 400px;height: 400px;">
+        <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
     </div>
     <p id='total-price'>R$ 0.00</p>
     <div id="t">

@@ -7,6 +7,8 @@ function inicializar() {
     (Talher = []),
     (Louca = []),
     (Decoracao = []),
+    (Entretenimento=[])
+
   ];
   const productList = document.getElementById("product-list");
   const totalPrice = document.getElementById("total-price");
@@ -18,15 +20,16 @@ function inicializar() {
   var PrecoT = 0;
   var PrecoL = 0;
   var PrecoD = 0;
+  var PrecoE = 0
 
   let products = [];
   const chartCanvas = document.getElementById("myChart");
   const data = {
-    labels: ["Comida", "Bebida", "Talher", "Louça", "Decoração"],
+    labels: ["Comida", "Bebida", "Talher", "Louça", "Decoração", "Entretenimento"],
     datasets: [
       {
-        data: [0, 0, 0, 0, 0],
-        backgroundColor: ["blue", "pink", "red", "green", "purple"],
+        data: [0, 0, 0, 0, 0, 0],
+        backgroundColor: ["blue", "pink", "red", "green", "purple", "yellow"],
       },
     ],
   };
@@ -66,6 +69,9 @@ function inicializar() {
     Tipos[4].forEach((x) => {
       PrecoD = PrecoD + x.price;
     });
+    Tipos[5].forEach((x) => {
+      PrecoE = PrecoE + x.price;
+    });
     totalPrice.textContent = `Total a Pagar: R$ ${totalPriceValue.toFixed(2)}`;
   }
 
@@ -98,15 +104,17 @@ function inicializar() {
       } else {
         if (product.tipo == "Bebida") {
           Tipos[1].push(product);
-          alert(Tipos[1]);
+
         } else {
           if (product.tipo == "Talher") {
             Tipos[2].push(product);
           } else {
             if (product.tipo == "Louca") {
               Tipos[3].push(product);
-            } else {
+            } else if((product.tipo == "Decoração")) {
               Tipos[4].push(product);
+            }else if((product.tipo == "Entretenimento")){
+              Tipos[5].push(product);
             }
           }
         }
@@ -121,6 +129,8 @@ function inicializar() {
         data.datasets[0].data[3] = product.total + data.datasets[0].data[3];
       } else if (product.tipo === "Decoração") {
         data.datasets[0].data[4] = product.total + data.datasets[0].data[4];
+      }else{
+        data.datasets[0].data[5] = product.total + data.datasets[0].data[5];
       }
 
       myChart.update();

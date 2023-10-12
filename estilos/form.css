@@ -45,6 +45,8 @@ textarea {
   padding-top: 6px;
 }
 #fm {
+
+  width: 100%;
   align-items: center;
 
   flex-direction: column;
