@@ -116,7 +116,7 @@ div {
     font-size: 40px;
 }
 
-#calculate {
+.calculate, #calculate {
     background: var(--linear-gradient);
     border: none;
     padding: 10px;

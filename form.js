@@ -206,7 +206,7 @@ const Finalizar = function () {
 
   <input id="pagar"
   type="submit"
-  value="Pagar"
+  value="Enviar"
   style="
     height: 40px;
     text-decoration: none;
@@ -217,6 +217,7 @@ const Finalizar = function () {
     padding-bottom: 10px;
   "
 /></br>
+<button class="calculate" style="display: none;" id="acaba"><a href="p.html" style="color: white;">Finalizar</a></button>
 <div id="em" style="display:none;">
 <p id="ValorFaltante">Valor que falta:R$</p>
 <p>Você não possui dinheiro o suficiente para pagar, recomendamos que faça um empréstimo</p></br>
@@ -246,7 +247,11 @@ product.addEventListener("click", function (event) {
   document.getElementById("ValorFaltante").innerText =    document.getElementById("ValorFaltante").innerText + (Final - orcamento).toFixed(2)
   body.innerHTML = body.innerHTML
 
-}})
+}else{
+  document.getElementById('acaba').style.display = "initial"
+  body.innerHTML = body.innerHTML
+}
+})
 
 
 };
