@@ -217,7 +217,7 @@ const Finalizar = function () {
     padding-bottom: 10px;
   "
 /></br>
-<button class="calculate" style="display: none;" id="acaba"><a href="p.html" style="color: white;">Finalizar</a></button>
+<a href="p.html" class="calculate" style="display: none; color:white;" id="acaba">Finalizar</a>
 <div id="em" style="display:none;">
 <p id="ValorFaltante">Valor que falta:R$</p>
 <p>Você não possui dinheiro o suficiente para pagar, recomendamos que faça um empréstimo</p></br>
