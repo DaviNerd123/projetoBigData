@@ -194,7 +194,7 @@ const Finalizar = function () {
     <option value="50m²">50m²</option>
     <option value="100m²">100m²</option>
     <option value="120m²">120m²</option>
-    <option value="150m²">Louça</option>    
+    <option value="150m²">150m²</option>    
   </select></div><br>
   <div id="label"><label for="orcamento">Orçamento Disponivel</label><input type="number" name="orcamento" id="orcamento"></div><br>   <div id='label'><br><br> <label for='FormadePagamento' id='FormadePagamento' style="">Forma de Pagamento</label><select id="Forma-de-Pagamento" name="FormadePagamento">
     <option value="débito">débito</option>
