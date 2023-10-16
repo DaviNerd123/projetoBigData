@@ -219,13 +219,35 @@
         const nome = nomeInput.value;
         const sexo = sexoSelect.value;
         const idade = idadeI.value;
+        var h = 0
+            var Faa1 = FrequenciaA(classe[0])
+      var Frr1 = FrequenciaR(classe[0].length)
+      var Faa2 =FrequenciaR(classe[1].length)
+      var Frr2 = FrequenciaR(classe[1].length)
+      var Faa3 =  FrequenciaA(classe[2])
+      var Frr3 = FrequenciaR(classe[2].length)
+      var Faa4 = FrequenciaA(classe[3])
+      var Frr4 = FrequenciaR(classe[3].length)
+      var Faa5 =FrequenciaA(classe[4])
+      var Frr5 = FrequenciaR(classe[4].length)
+      var Faa6 = FrequenciaA(classe[5])
+      var Frr6 =FrequenciaR(classe[5].length)
+      var Faa7 = FrequenciaA(classe[6])
+      var Frr7 = FrequenciaR(classe[6].length)
+      var Faa8 =  FrequenciaA(classe[7])
+      var Frr8 =FrequenciaR(classe[7].length)
+      var Faa9 = FrequenciaA(classe[8])
+      var Frr9 =  FrequenciaR(classe[8].length)
+      var Faa10 = FrequenciaA(classe[9])
+      var Frr10 = FrequenciaR(classe[9].length)
         const convidado = {
           nome: nome,
           sexo: sexo,
           idade: idade,
         };
         function Atualiza(){
-                    Fa1.innerText = FrequenciaA(classe[0])
+          Fa1.innerText = FrequenciaA(classe[0])
+
           Fr1.innerText = FrequenciaR(classe[0].length) + "%"
           Fa2.innerText = FrequenciaA(classe[1])
           Fr2.innerText = FrequenciaR(classe[1].length) + "%"
@@ -245,6 +267,28 @@
           Fr9.innerText = FrequenciaR(classe[8].length) + "%"
           Fa10.innerText = FrequenciaA(classe[9])
           Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+           Frr1 = FrequenciaR(classe[0].length)
+     Faa2 =FrequenciaR(classe[1].length)
+       Frr2 = FrequenciaR(classe[1].length)
+       Faa3 =  FrequenciaA(classe[2])
+       Frr3 = FrequenciaR(classe[2].length)
+       Faa4 = FrequenciaA(classe[3])
+       Frr4 = FrequenciaR(classe[3].length)
+       Faa5 =FrequenciaA(classe[4])
+       Frr5 = FrequenciaR(classe[4].length)
+       Faa6 = FrequenciaA(classe[5])
+       Frr6 =FrequenciaR(classe[5].length)
+       Faa7 = FrequenciaA(classe[6])
+       Frr7 = FrequenciaR(classe[6].length)
+       Faa8 =  FrequenciaA(classe[7])
+       Frr8 =FrequenciaR(classe[7].length)
+       Faa9 = FrequenciaA(classe[8])
+       Frr9 =  FrequenciaR(classe[8].length)
+       Faa10 = FrequenciaA(classe[9])
+       Frr10 = FrequenciaR(classe[9].length)
+          h = Frr1 + Frr2 + Frr3+ Frr4 + Frr5 +Frr6+Frr7+Frr8+Frr9+Frr10
+          
+
         }
         if(idade <10){
           classe[0].push(convidado)
@@ -304,7 +348,9 @@ Atualiza()
             }
           }
         }
-      }
+      } 
+
+      
 
 
         convidados.push(convidado);

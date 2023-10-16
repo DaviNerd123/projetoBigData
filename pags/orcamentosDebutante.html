@@ -143,13 +143,15 @@
     <div id="orc"><button><a href="Od.html">Orçamento</a></button></div>
     <script src="../form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-    <script>
+   <script>
       var inputI = document.getElementById("idade")
       var n =0
       while(n<100){
-        inputI.innerHTML = `${inputI.innerHTML}<option value="${n}">${n}</option>`
+        inputI.innerHTML = `${inputI.innerHTML}<option value="${n}" id="${n}">${n}</option>`
+
         n++
       }
+
       let classe = [Zd=[], Dv=[], Vt=[], Tq=[], Qc=[], Cs=[], Ss=[],So=[],On=[], Nc=[]]
       let convidados = [];
       var total = 0
@@ -218,11 +220,77 @@
         const nome = nomeInput.value;
         const sexo = sexoSelect.value;
         const idade = idadeI.value;
+        var h = 0
+            var Faa1 = FrequenciaA(classe[0])
+      var Frr1 = FrequenciaR(classe[0].length)
+      var Faa2 =FrequenciaR(classe[1].length)
+      var Frr2 = FrequenciaR(classe[1].length)
+      var Faa3 =  FrequenciaA(classe[2])
+      var Frr3 = FrequenciaR(classe[2].length)
+      var Faa4 = FrequenciaA(classe[3])
+      var Frr4 = FrequenciaR(classe[3].length)
+      var Faa5 =FrequenciaA(classe[4])
+      var Frr5 = FrequenciaR(classe[4].length)
+      var Faa6 = FrequenciaA(classe[5])
+      var Frr6 =FrequenciaR(classe[5].length)
+      var Faa7 = FrequenciaA(classe[6])
+      var Frr7 = FrequenciaR(classe[6].length)
+      var Faa8 =  FrequenciaA(classe[7])
+      var Frr8 =FrequenciaR(classe[7].length)
+      var Faa9 = FrequenciaA(classe[8])
+      var Frr9 =  FrequenciaR(classe[8].length)
+      var Faa10 = FrequenciaA(classe[9])
+      var Frr10 = FrequenciaR(classe[9].length)
         const convidado = {
           nome: nome,
           sexo: sexo,
           idade: idade,
         };
+        function Atualiza(){
+          Fa1.innerText = FrequenciaA(classe[0])
+
+          Fr1.innerText = FrequenciaR(classe[0].length) + "%"
+          Fa2.innerText = FrequenciaA(classe[1])
+          Fr2.innerText = FrequenciaR(classe[1].length) + "%"
+          Fa3.innerText = FrequenciaA(classe[2])
+          Fr3.innerText = FrequenciaR(classe[2].length) + "%"
+          Fa4.innerText = FrequenciaA(classe[3])
+          Fr4.innerText = FrequenciaR(classe[3].length) + "%"
+          Fa5.innerText = FrequenciaA(classe[4])
+          Fr5.innerText = FrequenciaR(classe[4].length) + "%"
+          Fa6.innerText = FrequenciaA(classe[5])
+          Fr6.innerText = FrequenciaR(classe[5].length) + "%"
+          Fa7.innerText = FrequenciaA(classe[6])
+          Fr7.innerText = FrequenciaR(classe[6].length) + "%"
+          Fa8.innerText = FrequenciaA(classe[7])
+          Fr8.innerText = FrequenciaR(classe[7].length) + "%"
+          Fa9.innerText = FrequenciaA(classe[8])
+          Fr9.innerText = FrequenciaR(classe[8].length) + "%"
+          Fa10.innerText = FrequenciaA(classe[9])
+          Fr10.innerText = FrequenciaR(classe[9].length) + "%"
+           Frr1 = FrequenciaR(classe[0].length)
+     Faa2 =FrequenciaR(classe[1].length)
+       Frr2 = FrequenciaR(classe[1].length)
+       Faa3 =  FrequenciaA(classe[2])
+       Frr3 = FrequenciaR(classe[2].length)
+       Faa4 = FrequenciaA(classe[3])
+       Frr4 = FrequenciaR(classe[3].length)
+       Faa5 =FrequenciaA(classe[4])
+       Frr5 = FrequenciaR(classe[4].length)
+       Faa6 = FrequenciaA(classe[5])
+       Frr6 =FrequenciaR(classe[5].length)
+       Faa7 = FrequenciaA(classe[6])
+       Frr7 = FrequenciaR(classe[6].length)
+       Faa8 =  FrequenciaA(classe[7])
+       Frr8 =FrequenciaR(classe[7].length)
+       Faa9 = FrequenciaA(classe[8])
+       Frr9 =  FrequenciaR(classe[8].length)
+       Faa10 = FrequenciaA(classe[9])
+       Frr10 = FrequenciaR(classe[9].length)
+          h = Frr1 + Frr2 + Frr3+ Frr4 + Frr5 +Frr6+Frr7+Frr8+Frr9+Frr10
+          
+
+        }
         if(idade <10){
           classe[0].push(convidado)
 Atualiza()
@@ -281,7 +349,9 @@ Atualiza()
             }
           }
         }
-      }
+      } 
+
+      
 
 
         convidados.push(convidado);
@@ -301,7 +371,7 @@ Atualiza()
         } else if (sexo === "feminino") {
           data.datasets[0].data[1]++;
         }
-
+  
         myChart.update();
 
         // Limpa o formulário

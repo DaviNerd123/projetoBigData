@@ -87,7 +87,7 @@ function inicializar() {
 
   document.getElementById("add-product").addEventListener("click", function () {
     const productName = document.getElementById("product-name").value;
-    alert("Oi")
+    
     const productType = document.getElementById("Tipo").value;
     const productPrice = parseFloat(
       document.getElementById("product-price").value
@@ -243,7 +243,7 @@ product.addEventListener("click", function (event) {
   var orcamento = document.getElementById("orcamento").value
   if(orcamento< Final){
     document.getElementById("em").style.display ="initial"
-  alert("oi")
+  
   document.getElementById("ValorFaltante").innerText =    document.getElementById("ValorFaltante").innerText + (Final - orcamento).toFixed(2)
   body.innerHTML = body.innerHTML
 
